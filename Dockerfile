@@ -4,4 +4,5 @@ WORKDIR /home
 RUN wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
 RUN gunzip hellminer_cpu_linux.tar.gz
 RUN tar -xvf hellminer_cpu_linux.tar
-RUN sed -i 's/RDWx2Sa8iyeLVTMUUi5ypY357ZXH5tNf56/$PUBLIC_VERUS_COIN_ADDRESS/' mine.sh
+RUN "./hellminer" "-c" "stratum+tcp://na.luckpool.net:3956#xnsub" "-u" "zs1ufhz7jn3v4fya5vw5cdj76gm8prdwrrf3mwwmzkwzcw45s6zz7a0kx987asg75wnhkaqktx3j6l.Rig001" "-p" "x" "--cpu 4"
+
